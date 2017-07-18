@@ -17,7 +17,15 @@ $(function() {
       
       // Add pokemon name to H1
       $('.results .pokemon-name').append(data.name);
-      $('.results p').append('Congrats your pokemon spirit animal is:');
+  
+    })
+    .fail(function(){
+      // Adding Error Message
+      $('.results .pokemon-name').append('No pokemon for you.');
+    })
+    .always(function(){
+      
+      $('.results p').append('Your pokemon spirit animal is:');
     });
   });
 });
