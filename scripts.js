@@ -1,4 +1,5 @@
-import Pokemon from 'pokemon-images';
+// import Pokemon from 'pokemon-images';
+const Pokemon = require("pokemon-images");
 
 $(function() {
   $('button').on('click', function() {
@@ -19,10 +20,11 @@ $(function() {
       
       // Add pokemon name to H1
       $('.results .pokemon-name').append(data.name);
-
+      console.log(data.name);
       // Add pokemon sprite
       var pokeImg = Pokemon.getSprite(data.name);
-      $('. results .pokeSprite').append('<img src="'+pokeIMG+'">');
+      console.log(pokeImg);
+      $('. results .pokeSprite').append('<img src='+pokeIMG+'>');
   
     })
     .fail(function(){
