@@ -1,3 +1,5 @@
+import Pokemon from 'pokemon-images';
+
 $(function() {
   $('button').on('click', function() {
     //Random Number Generator
@@ -17,6 +19,10 @@ $(function() {
       
       // Add pokemon name to H1
       $('.results .pokemon-name').append(data.name);
+
+      // Add pokemon sprite
+      var pokeImg = Pokemon.getSprite(data.name);
+      $('. results .pokeSprite').append('<img src="'+pokeIMG+'">');
   
     })
     .fail(function(){
