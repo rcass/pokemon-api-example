@@ -4,8 +4,10 @@
 $(function() {
   $('button').on('click', function() {
     $('.sprite').remove();
-    $('.pokeball').addClass('.pokeballanimate');
-    $('.pokeball__button').addClass('.pokeball_buttonanimate');
+    $('.pokemon-name').empty();
+    
+    $('.pokeball').addClass('pokeballanimate');
+    $('.pokeball__button').addClass('pokeball_buttonanimate');
     // Random Number Generator
     function getRandomInt(min, max) {
       min = Math.ceil(min);
@@ -38,8 +40,9 @@ $(function() {
       $('.results .pokemon-name').append('No pokemon for you.');
     })
     .always(function(){
-      
       $('.results p').append('Your pokemon spirit animal is:');
+      $('.pokeball').removeClass('pokeballanimate');
+    $('.pokeball__button').removeClass('pokeball_buttonanimate');
     });
   });
 });
