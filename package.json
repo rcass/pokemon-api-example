@@ -1,0 +1,11 @@
+{
+  "name": "pokemon-api-example",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/Rob-Rychs/pokemon-api-example.git",
+  "author": "Rob-Rychs <Robrychel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pokemon-images": "^2.0.1"
+  }
+}
