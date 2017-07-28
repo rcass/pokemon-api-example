@@ -4,7 +4,9 @@
 $(function() {
   $('button').on('click', function() {
     $('.sprite').remove();
-    //Random Number Generator
+    $('.pokeball').addClass('.pokeballanimate');
+    $('.pokeball__button').addClass('.pokeball_buttonanimate');
+    // Random Number Generator
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
