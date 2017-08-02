@@ -1,5 +1,5 @@
-// import Pokemon from 'pokemon-images';
-// const Pokemon = require("pokemon-images");
+import Pokemon from 'pokemon-images';
+import $ from 'jquery';
 
 $(function() {
   $('button').on('click', function() {
@@ -14,11 +14,10 @@ $(function() {
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min; 
     }
-    var number = getRandomInt(1,150)
 
     $.ajax({
       method: 'GET',
-      url: 'https://pokeapi.co/api/v2/pokemon/'+ number 
+      url: 'https://pokeapi.co/api/v2/pokemon/'+ getRandomInt(1,150)
     })
     .done(function(data) {
       // Clear Field 
@@ -26,12 +25,11 @@ $(function() {
       
       // Add pokemon name to H1
       $('.results .pokemon-name').append(data.name);
-      console.log(data.name);
+      // console.log(data.name); // used to debug
 
       // Add pokemon sprite
-      // var pokeImg = Pokemon.getSprite(data.name);
-      // console.log(pokeImg);
-      var pokeImg = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + number + '.png';
+      var pokeImg = Pokemon.getSprite(data.name);
+      // console.log(pokeImg); // used to debug
       $('.results .pokeSprite').append('<img src='+pokeImg+' class="sprite">');
   
     })

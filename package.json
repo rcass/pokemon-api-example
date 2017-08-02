@@ -6,6 +6,10 @@
   "author": "Rob-Rychs <Robrychel@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "jquery": "^3.2.1",
     "pokemon-images": "^2.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.4.1"
   }
 }
